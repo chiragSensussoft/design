@@ -28,58 +28,51 @@ class _IntroState extends State<Intro> {
           backgroundColor: Pelette.ColorPrimaryDark,
         ),
       ),
-        body: SafeArea(
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Container(
-                          height: MediaQuery.of(context).size.height,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('image/third_intro.png'),
-                                  fit: BoxFit.cover
-                              )
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                children: [
-                                  Container(margin: const EdgeInsets.only(top: 80),
-                                    child: Text(
-                                      'HOST THE WORK SPACE REVOLUTION!',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 20),
-                                    ),
-                                  ),
-                                  Container(margin: const EdgeInsets.only(top: 25),
-                                    child: Text('Got Free Space?',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
-                                  ),
-                                  Container(margin: const EdgeInsets.only(top: 20,left: 20,right: 20),
-                                    child: Text('Share Your Space With Thousands Of Startups and Freelancers Instantly ready to book it!',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
-                                  ),
-                                ],
-                              ),
-                              Container(margin: const EdgeInsets.only(bottom: 10),
-                                child: Material(
-                                  color: Color(0xffE92D5B),
-                                  borderRadius: BorderRadius.circular(25),
-                                  child: FlatButton(
-                                    onPressed: (){
-                                      Navigator.push(context, MaterialPageRoute(
-                                        builder: (context) => Home()
-                                      ));
-                                    },
-                                    child: Text('BECOME A HOST',style: TextStyle(color: Colors.white),),
-                                    minWidth: MediaQuery.of(context).size.width,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-              )
-            ],
-          ),
-        )
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('image/third_intro.png'),
+                fit: BoxFit.cover
+            )
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Container(margin: const EdgeInsets.only(top: 80),
+                  child: Text(
+                    'HOST THE WORK SPACE REVOLUTION!',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 20),
+                  ),
+                ),
+                Container(margin: const EdgeInsets.only(top: 25),
+                  child: Text('Got Free Space?',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+                ),
+                Container(margin: const EdgeInsets.only(top: 20,left: 20,right: 20),
+                  child: Text('Share Your Space With Thousands Of Startups and Freelancers Instantly ready to book it!',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+                ),
+              ],
+            ),
+          Container(margin: const EdgeInsets.only(bottom: 10),
+                child: Material(
+                  color: Color(0xffE92D5B),
+                  borderRadius: BorderRadius.circular(25),
+                  child: FlatButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => Home()
+                      ));
+                    },
+                    child: Text('BECOME A HOST',style: TextStyle(color: Colors.white),),
+                    minWidth: MediaQuery.of(context).size.width,
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
     );
   }
 }
+

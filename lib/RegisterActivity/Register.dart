@@ -16,13 +16,10 @@ class MyActivity extends StatelessWidget {
   }
 }
 
-// ignore: must_be_immutable
 class Register extends StatefulWidget {
 
-  String email;
   @override
   _RegisterState createState() => _RegisterState();
-  Register({Key key,@required email}) :super(key : key);
 }
 
 class _RegisterState extends State<Register> {

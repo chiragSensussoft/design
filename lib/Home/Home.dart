@@ -1,5 +1,9 @@
+import 'package:design/BottomBar.dart';
+import 'package:design/responsive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../TopBarContent.dart';
 
 void main() => runApp(Home());
 
@@ -21,7 +25,18 @@ class MyHome extends StatefulWidget {
 class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    var screenSize = MediaQuery.of(context).size;
+    return Scaffold(
+      appBar:Responsive.isSmallScreen(context) ? AppBar(
+        backgroundColor: Color(0xff18a499),
+        title: Text('Spaciko'),
+      )
+      :PreferredSize(
+        preferredSize: Size(screenSize.width,screenSize.height),
+        child: TopBarContent(),
+      ),
+       bottomNavigationBar: Responsive.isSmallScreen(context) ? BottomBar() : null
+    );
   }
 }
 
